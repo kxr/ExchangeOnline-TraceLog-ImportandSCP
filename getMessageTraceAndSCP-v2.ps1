@@ -83,7 +83,7 @@ For($i = 1; $i -le 1000; $i++) {
 
 
 # SCP the output csv file to the logging server
-Start-Process "$ScriptDir\pscp.exe" -Wait -ArgumentList ("-scp -i `"$ScriptDir\$sshKey`" -hostkey `"16:65:00:12:b5:a7:af:0e:c4:75:4d:5a:d4:c6:bd:6c`" `"$ScriptDir\$OutPutCSV`" `"$SCPDestination`"")
+Start-Process "$ScriptDir\pscp.exe" -Wait -ArgumentList ("-scp -i `"$ScriptDir\$sshKey`" -hostkey `"16:65:00:12:b5:a7:af:0e:c4:75:4d:5a:d4:c6:bd:6c`" `"$ScriptDir\$CSVTimeStamp-$OutPutCSV`" `"$SCPDestination`"")
 Write-Host "Secure Copied  $ScriptDir\$CSVTimeStamp-$OutPutCSV to $SCPDestination"
 
 # End the PS Session
