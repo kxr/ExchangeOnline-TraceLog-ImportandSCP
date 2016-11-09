@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "Office365-Trace-Delivered-Pi-Sender-ExternalVsInternal",
+    "_type": "visualization",
+    "_source": {
+      "title": "Office365-Trace-Delivered-Pi-Sender-ExternalVsInternal",
+      "visState": "{\"title\":\"Office365-Trace-Delivered-Pi-Sender-ExternalVsInternal\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"External Vs Internal\"}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"-recipient.raw: *@hbmsu.ac.ae\",\"analyze_wildcard\":true}}},\"label\":\"External\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"recipient.raw: *@hbmsu.ac.ae\",\"analyze_wildcard\":true}}},\"label\":\"Internal\"}]}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"legendOpen\":false,\"colors\":{\"*\":\"#E24D42\",\"src-ip: 192.168.* 10.*\":\"#629E51\",\"-src-ip: 192.168.* 10.*\":\"#E24D42\",\"External\":\"#BF1B00\",\"Internal\":\"#3F6833\"}}}",
+      "description": "",
+      "savedSearchId": "Office365-Trace-Delivered",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Office365-Trace-Delivered-Terms-MsgID",
+    "_type": "visualization",
+    "_source": {
+      "title": "Office365-Trace-Delivered-Terms-MsgID",
+      "visState": "{\"title\":\"Office365-Trace-Delivered-Terms-MsgID\",\"type\":\"table\",\"params\":{\"perPage\":20,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"msgid.raw\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Top Message-ID\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "Office365-Trace-Delivered",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Office365-Trace-Delivered-Terms-Recipient",
+    "_type": "visualization",
+    "_source": {
+      "title": "Office365-Trace-Delivered-Terms-Recipient",
+      "visState": "{\"title\":\"Office365-Trace-Delivered-Terms-Recipient\",\"type\":\"table\",\"params\":{\"perPage\":7,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"recipient.raw\",\"size\":7,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Top Recipient\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "Office365-Trace-Delivered",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Office365-Trace-Delivered-Terms-Sender",
+    "_type": "visualization",
+    "_source": {
+      "title": "Office365-Trace-Delivered-Terms-Sender",
+      "visState": "{\"title\":\"Office365-Trace-Delivered-Terms-Sender\",\"type\":\"table\",\"params\":{\"perPage\":7,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"sender.raw\",\"size\":7,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Top Sender\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "Office365-Trace-Delivered",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Office365-Trace-Delivered-Terms-SrcIP",
+    "_type": "visualization",
+    "_source": {
+      "title": "Office365-Trace-Delivered-Terms-SrcIP",
+      "visState": "{\"title\":\"Office365-Trace-Delivered-Terms-SrcIP\",\"type\":\"table\",\"params\":{\"perPage\":7,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"src-ip\",\"size\":7,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Top Source IP\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "savedSearchId": "Office365-Trace-Delivered",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Office365-Trace-Delivered-VerticalBarChart-MessageCount",
+    "_type": "visualization",
+    "_source": {
+      "title": "Office365-Trace-Delivered-VerticalBarChart-MessageCount",
+      "visState": "{\"title\":\"Office365-Trace-Delivered-VerticalBarChart-MessageCount\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"mode\":\"grouped\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"times\":[],\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"msgid.raw\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"\"}},{\"id\":\"3\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"Count\":\"#E0752D\"}}}",
+      "description": "",
+      "savedSearchId": "Office365-Trace-Delivered",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      }
+    }
+  }
+]
