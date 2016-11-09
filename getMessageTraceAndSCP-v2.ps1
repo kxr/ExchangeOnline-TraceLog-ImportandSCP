@@ -40,6 +40,7 @@ If (Test-Path "$ScriptDir\$CSVTimeStamp-$OutPutCSV"){
 }
 
 # Start the Session with Exchange Online
+Write-Host "Connecting to https://ps.outlook.com/powershell/"
 $UserName = "admin@hbmsu.onmicrosoft.com"
 $Password = cat "$ScriptDir\$MSPasswordFile" | convertto-securestring
 $Credentials = new-object -typename System.Management.Automation.PSCredential -ArgumentList $UserName,$Password
