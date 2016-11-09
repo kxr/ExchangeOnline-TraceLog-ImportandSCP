@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "Office365-Trace-Delivered",
+    "_type": "search",
+    "_source": {
+      "title": "Office365-Trace-Delivered",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src-ip",
+        "sender",
+        "subject",
+        "size",
+        "recipient",
+        "msgid"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-*\",\"key\":\"tags\",\"negate\":false,\"value\":\"office365-trace\"},\"query\":{\"match\":{\"tags\":{\"query\":\"office365-trace\",\"type\":\"phrase\"}}}},{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"key\":\"status\",\"value\":\"Delivered\",\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"status\":{\"query\":\"Delivered\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      }
+    }
+  }
+]
