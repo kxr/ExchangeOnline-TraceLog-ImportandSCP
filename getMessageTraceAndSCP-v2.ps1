@@ -28,7 +28,7 @@ $ScriptDir = Split-Path $ScriptPath
 # For example If we run this script every hour and use the format "dd-h",
 # Where dd is day of the month and h is Hour of the day,
 # we will be keeping one months of logs i.e 30*24=720
-$CSVTimeStamp = get-date -Format "dd-h"
+$CSVTimeStamp = get-date -Format "dd-H"
 
 # Don't show warning messages
 $WarningPreference = "SilentlyContinue"
